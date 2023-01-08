@@ -1,7 +1,7 @@
 /* CSS de Encriptador----------------------------------------------------------------------------------------------------------------------------------*/
 body{
     font-family: 'Inter', sans-serif;
-    background-image: url('Imagenes/Fondo.JPG');
+    background-image: url('imagenes/fondo.jpg');
     background-attachment: fixed;
     transition: background-position 2s;
 }
@@ -233,7 +233,7 @@ footer{
     color:#ffffff;
     font-weight: 500;
     text-align: center;
-    background: url(imagenes/fondoFooter.jpg) ;
+    background: url(imagenes/fondofooter.jpg) ;
     padding: 12px 0 12px 20px;  
     box-shadow: -10px -10px 15px rgb(255, 255, 255, 0.25),
             10px 10px 15px rgba(70,70,70,0.25);        
