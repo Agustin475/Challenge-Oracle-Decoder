@@ -1,0 +1,423 @@
+/* CSS de Encriptador----------------------------------------------------------------------------------------------------------------------------------*/
+body{
+    font-family: 'Inter', sans-serif;
+    background-image: url('Imagenes/Fondo.JPG');
+    background-attachment: fixed;
+    transition: background-position 2s;
+}
+  
+.contenedor{
+    display: flex;
+    justify-content: flex-start;  
+    flex-wrap: wrap;
+    background: linear-gradient( rgba(173, 255, 232, 0.8), rgba(112, 214, 255, 0.8));
+}
+/* Columna 1 LOGO   ---------------------------------------------------------------------------------------------------------------------------------*/
+.col1{         
+    width: 120px;  
+    margin: 40px 0 0 0;
+
+}
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+.imagenLogo{
+    height: 48px;
+    animation: spin 4s linear infinite;
+}
+/* Columna 2 ENTRADA TEXTO----------------------------------------------------------------------------------------------------------------------------*/
+.col2{
+    width: 680px;
+    margin: 168px 40px 40px 40px;
+}
+.entrada #textoEncriptado{
+    transition: all 0.2s;
+    width: 670px;
+    height: 450px ;
+    margin-bottom: 50px;
+    background-color: #ffffff00;
+    color: darkblue;
+    border: 0;
+    outline: none; 
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;   
+}
+.entrada ::placeholder { 
+    color: darkblue;
+}
+/* Inicio de la Web Efectos ---------------------------------------------------------------------*/
+  @keyframes hello-goodbye {
+    0% {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+    50% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(+60px)  ;
+      opacity: 0;
+    }
+  }
+
+#logoChallenges, #titulo{
+    animation: hello-goodbye 3s;
+    width: fit-content;
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 315px;
+}
+#titulo{
+    top: 300px;
+    left: 415px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+.candadoCerrado, .candadoAbierto, .copiado {
+    display:none;
+    position: absolute;
+    top: 300px;
+    left: 415px;
+}
+#candadoCerrado img, #candadoAbierto img, #copiado img, #logoChallenges img, #titulo img{
+    border-radius: 50px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.25),
+            10px 10px 15px rgba(70,70,70,0.25);
+}
+.copiado {
+    left: 1030px;
+}
+
+.simbolo{
+    display: inline-block;
+    width: 16px;
+    margin: 0px 8px -4px 0px;
+}
+.nota{
+    display: inline-block;
+    width: 205px;
+    height: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 80%;
+}
+#botonEncriptado{
+    display: inline;
+    width: 320px;
+    height: 67px;
+    margin: 16px 24px 24px 0px;
+    background-color: #176acf;
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+    font-size: 18px;
+    border: 0;
+    box-shadow: 0 8px 0 #1a74a14f;
+    transition: transform .1s ease-in-out;
+}
+#botonEncriptado:hover{
+    background-color: #1e7df2;
+    cursor:pointer;
+}
+#botonEncriptado:active{
+    box-shadow:  0 7px 0 #1a74a14f;
+    transform: translate(0,2px);
+}
+#botonDesencriptado{
+    display: inline;
+    width: 320px;
+    height: 67px;
+    margin: 16px 0px 24px 0px;
+    background-color: #ddedff;
+    color: #0A3871;
+    border-radius: 24px;  
+    font-size: 18px;
+    border: 0;
+    box-shadow: 0 8px 0 #1a74a14f;
+    transition: transform .1s ease-in-out;
+}
+#botonDesencriptado:hover{
+    background-color: #e8f0f9;
+    cursor: pointer;
+}
+#botonDesencriptado:active{
+    box-shadow:  0 7px 0 #1a74a14f;
+    transform: translate(0,2px);
+}
+
+/* Columna 3 SALIDA -------------------------------------------------------------------------------------------------------------------------------*/
+
+.col3{   
+    width: 400px;
+    margin: 40px 0 32px 0;
+}
+.salida{  
+    width: 400px;
+    height: 710px;
+    padding: 32px;
+    border-radius: 32px;
+    box-Shadow: -10px -10px 15px rgba(255,255,255,0.5), 10px 10px 15px rgba(70,70,70,0.12);
+    background-color: rgba(162, 216, 251, 0.12);
+}
+.salida img{
+    width: 336px;
+    height: 304px;
+    padding: 130px 0px 32px 32px;   
+}
+.salida h1{   
+    width:336px;
+    padding: 0 0 16px 32px ;
+    color:#343A40;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 120%;  
+}
+.salida p{
+    width: 336px;
+    padding: 0 0 0 32px;
+    color: rgb(44, 44, 44);
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+}
+.salida #textoDesencriptado{
+    width: 390px;
+    height: 600px;
+    display:none;
+    outline: none; 
+    border: 0;
+    font-family: "inter";
+    font-size: 24px;
+    color: #2a2d30;
+    line-height: 150%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.salida #textoDesencriptado :focus{
+    outline: none; 
+}
+.salida #botonCopiar{ 
+    width: 328px;
+    height: 67px;
+    margin: 32px 0 32px 32px;
+    display:none;
+    background: #b8f6fc;
+    color: #0A3871;
+    border-radius: 24px;
+    font-size: 18px;
+    border: 0;
+    box-shadow: 0 8px 0 #1a74a14f;
+    transition: transform .1s ease-in-out;
+}
+#botonCopiar:hover{
+    background-color: #cbf8fd;
+    cursor: pointer;
+}
+#botonCopiar:active{
+    box-shadow:  0 7px 0 #1a74a14f;
+    transform: translate(0,2px);
+}
+footer{   
+    display: flow-root;
+    height: 210px;
+    width:95%;
+    border-radius: 0 50px 0 0 ;
+    font-family: 'Rajdhani', sans-serif;
+    color:#ffffff;
+    font-weight: 500;
+    text-align: center;
+    background: url(imagenes/fondoFooter.jpg) ;
+    padding: 12px 0 12px 20px;  
+    box-shadow: -10px -10px 15px rgb(255, 255, 255, 0.25),
+            10px 10px 15px rgba(70,70,70,0.25);        
+}
+footer img{
+    border-radius: 10px;
+    height: 40px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 0 #165e83; 
+}
+footer #logo2, #logo3{
+    margin: 40px;
+}
+
+
+@media screen and (max-width:1290px) {   /* MEDIA Monitor chico ------------------------------------------------------------*/
+    #logoChallenges, #titulo{
+    left: 3000px;
+    }
+    .col2{
+        margin: 150px auto 32px auto;
+    }
+    .col3{
+        margin: auto auto 32px auto;
+    }
+    .candadoCerrado, .candadoAbierto, .copiado {
+        top: 190px;
+        left: 475px;
+    }
+    .copiado {
+        top: 940px;
+    }
+    footer{
+        height: 60px;
+    }
+    footer #logo2, #logo3{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {   /* MEDIA TABLET------------------------------------------------------------------- */
+    .col1{         
+        height: auto;      
+        margin: 100px 0 60px 0px;  
+    }
+    .col2{
+        margin: 0 0 0 40px;
+    }
+    .entrada #textoEncriptado{
+        height: 480px;
+        margin: 0 0 20px 0;
+    }
+    #botonEncriptado{
+        margin: 16px 16px 16px 0;
+    }
+    #botonDesencriptado{
+        margin: 0 16px 16px 0;
+    }
+    .candadoCerrado, .candadoAbierto, .copiado {
+        top: 380px;
+        left: 290px;
+    }
+    .copiado {
+        top: 970px;
+        left: 290px;
+    }
+    .col3{
+        width: 100%;
+    }
+    .salida{ 
+        width: 610px;
+        height: 400px;
+        margin: 40px;
+    }
+    .salida img{
+        display: none; 
+    }
+    .salida h1{
+        padding: 120px 0 16px 0;
+        width: 624px;
+        height: 29px;  
+    }
+    .salida p{
+        width: 624px;
+        padding: 0;
+    }
+    .salida #textoDesencriptado{
+        padding: 32px;
+        width: 545px;
+        height: 212px;
+    }
+    .salida #botonCopiar{
+        width: 545px;
+    }
+    footer{
+        height: 18px;
+    }
+    footer img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:425px) {   /* MEDIA CELULAR------------------------------------------------------------------- */
+    body{
+        height: auto;
+        width: 425px;
+    }
+    .col1{        
+        margin: 24px 0 70px -23px;
+    }
+    .col2{
+        margin: 0 auto 0 auto;
+        width: 340px;
+    }
+    .entrada #textoEncriptado{
+        height: 260px;
+        width: 335px;   
+    }
+    .candadoCerrado, .candadoAbierto, .copiado {
+        top: 210px;
+        left: 138px;
+    }
+    .copiado {
+        top: 750px;
+    }
+    #botonEncriptado{
+        width: 340px;
+    }
+    #botonDesencriptado{
+        width: 340px;
+        margin: 4px 0 24px 0;
+    }
+    .col3{
+        margin: 0 auto 0 auto;
+        width: 340px;
+    }
+    .salida{
+        width: 275px;
+        height: 400px; 
+        margin: 0 0 40px 0;
+    }
+    .salida img{
+        width: 340px;
+    }
+    .salida h1{
+        width: 260px;
+        height: 58px; 
+    }
+    .salida p{
+        width: 260px;
+        height: 48px;
+        padding: 32px 0 32px 0;
+    }
+    .salida #textoDesencriptado{
+        width: 260px;
+        height: 300px;
+        padding: 0;
+    }
+    .salida #botonCopiar{
+        width: 260px;
+        margin-left: 0;
+    }
+    footer{
+        height: 18px;
+    }
+    footer img{
+        display: none;
+    }
+}
+@media screen and (max-width:320px) { /* MEDIA CELULAR Chico------------------------------------------------------------------- */
+    body{
+        width: 375px;
+    }
+    .col2{
+        margin: 0 16px 0 16px;
+    }
+    .col3{
+        margin: 0 16px 68px 16px;    
+    }
+    .candadoCerrado, .candadoAbierto, .copiado {
+        top: 210px;
+        left: 103px;
+    }
+    .copiado {
+        top: 750px;
+    }
+}
