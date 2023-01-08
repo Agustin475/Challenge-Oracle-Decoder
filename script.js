@@ -42,6 +42,7 @@ function ocultar(){
 
 // Funcion para encriptar el mensaje
 function encriptar(){
+    document.getElementById("textoDesencriptado").innerHTML="";
     var frase = document.getElementById("textoEncriptado").value.toLowerCase();                // Guarda el mensaje en minuscula en la var. frase 
     if(frase == ""){                                                                           // Si no escribio nada avisar
         $nombre.focus();                                                                       // Ubica el foco en textoEncriptado
