@@ -22,4 +22,4 @@ El proyecto se trata de un encriptador de texto con diseño responsive.
 
 <h3>Preview</h3>
 
-![Encriptador Alura](https://github.com/Agustin475/Challenge-Oracle-Decoder/issues/2#issue-1537426082.jpg)
+![Encriptador Alura](https://user-images.githubusercontent.com/114935382/213092130-49674d08-1aa5-42eb-96c1-876278ca2104.JPG)
