@@ -34,7 +34,7 @@ body{
 .entrada #textoEncriptado{
     transition: all 0.2s;
     width: 670px;
-    height: 450px ;
+    height: 450px;
     resize: none;
     margin-bottom: 50px;
     background-color: #ffffff00;
