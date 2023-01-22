@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
     transition: background-position 2s;
 }
-  
+
 .contenedor{
     display: flex;
     justify-content: flex-start;  
@@ -35,6 +35,7 @@ body{
     transition: all 0.2s;
     width: 670px;
     height: 450px ;
+    resize: none;
     margin-bottom: 50px;
     background-color: #ffffff00;
     color: darkblue;
@@ -51,7 +52,7 @@ body{
     color: darkblue;
 }
 /* Inicio de la Web Efectos ---------------------------------------------------------------------*/
-  @keyframes hello-goodbye {
+@keyframes hello-goodbye {
     0% {
       transform: translateX(-60px);
       opacity: 0;
@@ -64,7 +65,7 @@ body{
       transform: translateX(+60px)  ;
       opacity: 0;
     }
-  }
+}
 
 #logoChallenges, #titulo{
     animation: hello-goodbye 3s;
@@ -89,7 +90,7 @@ body{
 #candadoCerrado img, #candadoAbierto img, #copiado img, #logoChallenges img, #titulo img{
     border-radius: 50px;
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.25),
-            10px 10px 15px rgba(70,70,70,0.25);
+                 10px  10px 15px rgba(70,70,70,0.25);
 }
 .copiado {
     left: 1030px;
@@ -192,6 +193,7 @@ body{
     width: 390px;
     height: 600px;
     display:none;
+    resize: none;
     outline: none; 
     border: 0;
     font-family: "inter";
@@ -248,23 +250,37 @@ footer #logo2, #logo3{
     margin: 40px;
 }
 
-
-@media screen and (max-width:1290px) {   /* MEDIA Monitor chico ------------------------------------------------------------*/
+@media screen and (max-width:1367px) {   /* MEDIA Monitor chico 1366px ------------------------------------------------------------*/
     #logoChallenges, #titulo{
-    left: 3000px;
+        left: 3000px;
     }
     .col2{
         margin: 150px auto 32px auto;
     }
     .col3{
         margin: auto auto 32px auto;
+        width: 500px;
+    }
+    .entrada #textoEncriptado {
+        height: 300px;
+    }
+    .salida #textoDesencriptado {
+        height: 456px;
+    }
+    .salida img {
+        padding: 60px 0px 32px 32px;
+    }
+    .salida{
+        height: 568px;
+        margin: 20px 0 0 0;
     }
     .candadoCerrado, .candadoAbierto, .copiado {
-        top: 190px;
-        left: 475px;
+        top: 230px;
+        left: 390px;
     }
     .copiado {
-        top: 940px;
+        top: 230px;
+        left: 1000px;
     }
     footer{
         height: 60px;
@@ -274,6 +290,27 @@ footer #logo2, #logo3{
     }
 }
 
+@media screen and (max-width:1290px) {   /* MEDIA Monitor chico 1290px ------------------------------------------------------------*/
+    .salida{
+        margin: 0;
+    }
+    .candadoCerrado, .candadoAbierto, .copiado {
+        top: 240px;
+        left: 610px;
+    }
+    .copiado {
+        top: 890px;
+        left: 550px;
+    }
+}
+@media screen and (max-width:1024px) {   /* MEDIA TABLET------------------------------------------------------------------- */
+    .candadoCerrado, .candadoAbierto, .copiado {
+        left: 490px;
+    }
+    .copiado {
+        left: 420px;
+    }
+}
 @media screen and (max-width:768px) {   /* MEDIA TABLET------------------------------------------------------------------- */
     .col1{         
         height: auto;      
